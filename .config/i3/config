@@ -176,6 +176,9 @@ bar {
 	#}
 }
 
+# Do not change focus when moving mouse pointer
+focus_follows_mouse no
+
 # Disable window titlebars
 new_window	1pixel
 

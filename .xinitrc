@@ -1,6 +1,6 @@
 #!/bin/bash
 xrdb -merge ~/.Xresources
-autocutsel -fork
+autocutsel -selection PRIMARY -fork
 autorandr -c
 dunst -config ~/.dunstrc & 
 exec i3

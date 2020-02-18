@@ -1,14 +1,25 @@
 # Set Win Key as modifier
-set $mod Mod4
+set $mod	Mod4
 
 # Font for window titles and bar
-font pango:Hack 10
+font	pango:Hack 10
+
+# Set colors
+set $bg			#282828
+set $red		#cc241d
+set $green		#98971a
+set $yellow		#d79921
+set $blue		#458588
+set $purple		#b16286
+set $aqua		#689d68
+set $gray		#a89984
+set $darkgray	#1s2021
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the screen before suspend.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=282828 --nofork
 
 # lock screen
-bindsym $mod+F12 loginctl lock-session
+bindsym $mod+F12	exec --no-startup-id loginctl lock-session
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -167,17 +178,6 @@ bar {
 
 # Disable window titlebars
 new_window	1pixel
-
-# Set colors
-set $bg			#282828
-set $red		#cc241d
-set $green		#98971a
-set $yellow		#d79921
-set $blue		#458588
-set $purple		#b16286
-set $aqua		#689d68
-set $gray		#a89984
-set $darkgray	#1s2021
 
 # Set appearance
 client.focused 			$blue $blue $darkgray $purple $darkgray

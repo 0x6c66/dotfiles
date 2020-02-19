@@ -3,7 +3,6 @@ export LANG=en_US.utf8
 
 # Enable ls colors
 autoload -U colors && colors
-autoload -U history-search-end
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 
 # Setup ls colors
@@ -15,12 +14,12 @@ fi
 ls --color -d . &>/dev/null && alias ls='ls --color=tty' || { ls -G . &>/dev/null && alias ls='ls -G' }
 
 # Set design of prompt
-PROMPT="%n@%m %B%F{green}%~%f%b "
+PROMPT="%(?:%n@%m %B%F{green}%~%f%b :%n@%m %B%F{red}%~%f%b )"
 
 # Set up history file
 HISTFILE=$HOME/.zsh_history
 # Set max amount of entries in history
-HISTSIZE=100000
+HISTSIZE=10000
 
 # Bind arrow up and down to search history based on entered text
 if [[ "${terminfo[kcuu1]}" != "" ]]; then
@@ -65,8 +64,3 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Set TTY for GPG
 export GPG_TTY=$(tty)
-
-# Attach TMUX on SSH session
-if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
-	tmux attach-session -t tty || tmux new-session -s tty
-fi

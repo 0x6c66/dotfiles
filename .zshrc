@@ -46,8 +46,6 @@ setopt share_history
 autoload -U compinit
 compinit
 
-# Automagically correct commands
-setopt correct_all
 # Automagically list choices on ambiguos completion
 setopt auto_list
 # Automagically use menu completion

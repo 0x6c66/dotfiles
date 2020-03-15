@@ -17,9 +17,9 @@ ls --color -d . &>/dev/null && alias ls='ls --color=tty' || { ls -G . &>/dev/nul
 PROMPT="%(?:%n@%m %B%F{green}%~%f%b :%n@%m %B%F{red}%~%f%b )"
 
 # Set up history file
-HISTFILE=$HOME/.zsh_history
+HISTFILE=~/.zsh_history
 # Set max amount of entries in history
-HISTSIZE=10000
+SAVEHIST=1000
 
 # Bind arrow up and down to search history based on entered text
 if [[ "${terminfo[kcuu1]}" != "" ]]; then

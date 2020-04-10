@@ -62,3 +62,6 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Set TTY for GPG
 export GPG_TTY=$(tty)
+
+# Set path for GoLang environment
+export GOPATH=$HOME/go

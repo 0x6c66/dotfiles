@@ -12,7 +12,8 @@ syntax enable "enable syntax highlighting
 filetype plugin indent on "automatically detect filetypes
 
 set noexpandtab "use tabs instead of spaces
-set tabstop=4 "width that a TAB character displays as
+set tabstop=1 "width that a TAB character displays as
+set shiftwidth=0 "match tabstop for indentation
 
 set autoindent "copy indent from current line when starting a new line
 set smartindent "more indentation magic

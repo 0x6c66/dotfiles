@@ -42,10 +42,6 @@ setopt inc_append_history
 # Share history between different instances of the shell
 setopt share_history
 
-# Enable command completion
-autoload -U compinit
-compinit
-
 # Automagically list choices on ambiguos completion
 setopt auto_list
 # Automagically use menu completion
@@ -60,8 +56,15 @@ zstyle ':completion:::::' completer _expand _complete _ignored _approximate
 # Take advantage of $LS_COLORS for completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
+# Source plugins
+source ~/.zsh_plugins/zsh-z/zsh-z.plugin.zsh
+
+# Enable tab completion
+autoload -U compinit && compinit
+
 # Set TTY for GPG
 export GPG_TTY=$(tty)
 
 # Set path for GoLang environment
 export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH

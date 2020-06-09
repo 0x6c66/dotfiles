@@ -68,3 +68,6 @@ export GPG_TTY=$(tty)
 # Set path for GoLang environment
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
+
+# Set path for Snap
+export PATH=/snap/bin:$PATH

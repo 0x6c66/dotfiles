@@ -4,8 +4,8 @@
 xrdb -merge ~/.Xresources
 
 # Start clipboard synchronisation daemons to sync buffers, clipboard and primary
-autocutsel -fork
 autocutsel -selection PRIMARY -fork
+autocutsel -selection CLIPBOARD -fork
 
 # Set up screens based on attached displays
 autorandr -c

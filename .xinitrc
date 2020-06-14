@@ -4,7 +4,7 @@
 xrdb -merge ~/.Xresources
 
 # Set keyboard layout for X session
-setxkbmap us intl
+setxkbmap -model hhk -layout us -variant intl
 
 # Start clipboard synchronisation daemons to sync buffers, clipboard and primary
 autocutsel -selection PRIMARY -fork

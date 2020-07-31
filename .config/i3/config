@@ -15,11 +15,8 @@ set $aqua		#689d68
 set $gray		#a89984
 set $darkgray	#1s2021
 
-# Set keyboard layout for Xsession
-exec --no-startup-id setxkbmap -model hhk -layout us -variant intl
-
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the screen before suspend.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=282828 --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=282828 -i ~/.config/feh/bixby_creek.heic --nofork
 
 # Lock screen
 bindsym $mod+F12	exec --no-startup-id loginctl lock-session

@@ -62,12 +62,3 @@ source ~/.zsh_plugins/zsh-z/zsh-z.plugin.zsh
 # Enable tab completion
 autoload -U compinit && compinit
 
-# Set TTY for GPG
-export GPG_TTY=$(tty)
-
-# Set path for GoLang environment
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
-
-# Set path for Snap
-export PATH=/snap/bin:$PATH

@@ -16,7 +16,7 @@ set $gray		#a89984
 set $darkgray	#1s2021
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the screen before suspend.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=282828 -i ~/.config/feh/bixby_creek.heic --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=282828 --nofork
 
 # Lock screen
 bindsym $mod+F12	exec --no-startup-id loginctl lock-session

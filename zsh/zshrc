@@ -1,0 +1,13 @@
+# Remove duplicate entries from history
+setopt hist_ignore_all_dups
+# Remove superfluous blanks from history items
+setopt hist_reduce_blanks
+# Save history items as soon as they are entered
+setopt inc_append_history
+# Share history between different instances of the shell
+setopt share_history
+
+# Automagically list choices on ambiguos completion
+setopt auto_list
+# Automagically use menu completion
+setopt auto_menu

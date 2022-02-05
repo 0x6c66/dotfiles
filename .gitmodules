@@ -1,3 +1,4 @@
-[submodule ".zsh_plugins/zsh-z"]
-	path = .zsh_plugins/zsh-z
-	url = https://github.com/agkozak/zsh-z
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty

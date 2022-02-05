@@ -1,0 +1,24 @@
+- defaults:
+	link:
+		create: true
+		relink: true
+
+- clean: ['~']
+
+- link:
+	~/.zshrc:
+		path: zsh/zshrc
+	~/.zprofile:
+		path: zsh/zprofile
+	~/.zshenv:
+		path: zsh/zshenv
+	~/.gitconfig:
+		path: git/gitconfig
+	~/.gnupg/:
+		glob: true
+		path: gnupg/*
+
+- shell:
+	- [git submodule update --init --recursive, Installing submodules]
+	- [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing Homebrew]
+	- [brew bundle --file=homebrew/, Installing applications]

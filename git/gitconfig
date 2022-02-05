@@ -1,0 +1,8 @@
+[user]
+	name = Mikhail Saratov
+	email = m@saratov.ch
+	signingkey = 760915E302BA84AE
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

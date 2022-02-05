@@ -1,0 +1,28 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "rfidresearchgroup/proxmark3"
+brew "gnupg"
+brew "mas"
+brew "rfidresearchgroup/proxmark3/proxmark3"
+cask "betaflight-configurator"
+cask "citrix-workspace"
+cask "little-snitch"
+cask "loopback"
+cask "microsoft-teams"
+cask "mumble"
+cask "nova"
+cask "signal"
+cask "teamspeak-client"
+cask "transmit"
+mas "1Blocker", id: 1365531024
+mas "1Password 7", id: 1333542190
+mas "Darkroom", id: 953286746
+mas "Final Cut Pro", id: 424389933
+mas "Keynote", id: 409183694
+mas "Logic Pro", id: 634148309
+mas "MainStage", id: 634159523
+mas "Moom", id: 419330170
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Reeder", id: 1529448980

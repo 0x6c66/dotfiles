@@ -1,18 +1,15 @@
 - defaults:
     link:
         create: true
-        relink: true
         force: true
 
 - clean: ['~']
 
 - link:
-    ~/.zshrc:
-        path: zsh/zshrc
-    ~/.zprofile:
-        path: zsh/zprofile
-    ~/.zshenv:
-        path: zsh/zshenv
+    ~/:
+        glob: true
+        path: zsh/*
+        prefix: '.'
     ~/.gitconfig:
         path: git/gitconfig
     ~/.gnupg/:
@@ -20,6 +17,18 @@
         path: gnupg/*
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
-    - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing Homebrew]
-    - [brew bundle --file=homebrew/, Installing applications]
+    -
+        command: git submodule update --init --recursive
+        description: Installing submodules
+        stderr: true
+    -
+        command: if type brew > /dev/null 2>&1; then echo "Found existing installation, skipping"; else /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; fi
+        description: Installing Homebrew
+        stderr: true
+        stdout: true
+        stdin: true
+    -
+        command: brew bundle --no-lock --file=homebrew/Brewfile
+        description: Installing applications
+        stderr: true
+

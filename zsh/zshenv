@@ -1,2 +1,5 @@
-# Source secrets
+# gnupg
+export GPG_TTY=$(tty)
+
+# secrets
 source ~/.zsh_secrets

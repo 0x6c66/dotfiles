@@ -1,23 +1,31 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/core"
 tap "rfidresearchgroup/proxmark3"
 brew "gnupg"
 brew "mas"
 brew "pinentry-mac"
-brew "rfidresearchgroup/proxmark3/proxmark3"
+brew "ykman"
+brew "zsh"
+brew "rfidresearchgroup/proxmark3/proxmark3", args: ["with-generic"]
 cask "betaflight-configurator"
 cask "citrix-workspace"
+cask "element"
+cask "forticlient-vpn"
 cask "little-snitch"
+cask "logitech-firmwareupdatetool"
 cask "loopback"
 cask "microsoft-teams"
 cask "mumble"
 cask "nova"
+cask "shadow"
 cask "signal"
 cask "teamspeak-client"
 cask "transmit"
 mas "1Blocker", id: 1365531024
 mas "1Password 7", id: 1333542190
+mas "Compressor", id: 424390742
 mas "Darkroom", id: 953286746
 mas "Final Cut Pro", id: 424389933
 mas "Keynote", id: 409183694

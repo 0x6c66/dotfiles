@@ -10,6 +10,9 @@
         glob: true
         path: zsh/*
         prefix: '.'
+    ~/.oh-my-zsh/:
+        glob: true
+        path: ohmyzsh/*
     ~/.gitconfig:
         path: git/gitconfig
     ~/.gnupg/:
@@ -31,4 +34,3 @@
         command: brew bundle --no-lock --file=homebrew/Brewfile
         description: Installing applications
         stderr: true
-

@@ -9,3 +9,7 @@ ZSH_THEME=""
 plugins=(cp git screen)
 
 source $ZSH/oh-my-zsh.sh
+
+# Path modifications
+path+=('~/.composer/vendor/bin')
+export PATH

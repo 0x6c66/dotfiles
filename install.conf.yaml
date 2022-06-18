@@ -18,7 +18,7 @@
     ~/.gnupg/:
         glob: true
         path: gnupg/*
-
+        
 - shell:
     -
         command: git submodule update --init --recursive
@@ -32,5 +32,6 @@
         stdin: true
     -
         command: brew bundle --no-lock --file=homebrew/Brewfile
-        description: Installing applications
+        description: Installing and updating tools
         stderr: true
+        stdout: true

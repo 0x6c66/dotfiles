@@ -9,7 +9,7 @@ DISABLE_AUTO_UPDATE=true
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(cp git screen zsh-autosuggestions)
+plugins=(git-prompt screen sudo zsh-autosuggestions)
 
 # Enable Homebrew completions if installed
 if type brew &>/dev/null

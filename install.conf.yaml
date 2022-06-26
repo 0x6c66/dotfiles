@@ -1,38 +1,41 @@
 - defaults:
-      link:
-          create: true
-          force: true
+    link:
+      create: true
+      force: true
 
 - clean: ["~"]
 
 - link:
-      ~/:
-          glob: true
-          path: zsh/*
-          prefix: "."
-      ~/.oh-my-zsh/:
-          glob: true
-          path: ohmyzsh/*
-      ~/.gitconfig:
-          path: git/gitconfig
-      ~/.gnupg:
-          path: gnupg
-      ~/.oh-my-zsh/custom/plugins/zsh-completions/src:
-          path: zsh-completions/src
-      ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:
-          path: zsh-autosuggestions
+    ~/:
+      glob: true
+      path: zsh/*
+      prefix: "."
+    ~/.oh-my-zsh/:
+      glob: true
+      path: ohmyzsh/*
+    ~/.gitconfig:
+      path: git/gitconfig
+    ~/.gnupg:
+      path: gnupg
+    ~/.oh-my-zsh/custom/plugins/zsh-completions/src:
+      path: zsh-completions/src
+    ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:
+      path: zsh-autosuggestions
+    ~/.docker/cli-plugins/docker-compose:
+      ignore-missing: true
+      path: $HOMEBREW_PREFIX/opt/docker-compose/bin/docker-compose
 
 - shell:
-      - command: git submodule update --init --recursive
-        description: Installing submodules
-        stderr: true
-        stdout: true
-      - command: if type brew > /dev/null 2>&1; then echo "Found existing installation, skipping"; else /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; fi
-        description: Installing Homebrew
-        stderr: true
-        stdout: true
-        stdin: true
-      - command: brew bundle --no-lock --file=homebrew/Brewfile
-        description: Installing toolsuite
-        stderr: true
-        stdout: true
+    - command: git submodule update --init --recursive
+      description: Installing submodules
+      stderr: true
+      stdout: true
+    - command: if type brew > /dev/null 2>&1; then echo "Found existing installation, skipping"; else /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; fi
+      description: Installing Homebrew
+      stderr: true
+      stdout: true
+      stdin: true
+    - command: brew bundle --no-lock --file=homebrew/Brewfile
+      description: Installing toolsuite
+      stderr: true
+      stdout: true

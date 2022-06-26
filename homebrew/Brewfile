@@ -1,11 +1,14 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "rfidresearchgroup/proxmark3"
+brew "colima"
+brew "docker-compose"
 brew "git"
-brew "pinentry-mac"
 brew "gnupg"
+brew "htop"
+brew "pinentry-mac"
+brew "rfidresearchgroup/proxmark3/proxmark3", args: ["with-generic"]
+brew "screen"
+brew "vim"
 brew "ykman"
 brew "zsh"
-brew "vim"
-brew "screen"
-brew "rfidresearchgroup/proxmark3/proxmark3", args: ["with-generic"]

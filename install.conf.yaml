@@ -15,12 +15,12 @@
           path: ohmyzsh/*
       ~/.gitconfig:
           path: git/gitconfig
-      ~/.gnupg/:
-          glob: true
-          path: gnupg/*
-      ~/.oh-my-zsh/custom/plugins/zsh-completions/src/:
-          glob: true
-          path: zsh-completions/src/*
+      ~/.gnupg:
+          path: gnupg
+      ~/.oh-my-zsh/custom/plugins/zsh-completions/src:
+          path: zsh-completions/src
+      ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:
+          path: zsh-autosuggestions
 
 - shell:
       - command: git submodule update --init --recursive

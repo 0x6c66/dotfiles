@@ -1,9 +1,11 @@
 # editor
 export EDITOR="vim"
-export VISUAL="nova"
+export VISUAL="vim"
 
 # gnupg
 export GPG_TTY=$(tty)
 
 # secrets
-source ~/.zsh_secrets
+if [ -f ~/.zsh_secrets ]; then
+	source ~/.zsh_secrets
+fi

@@ -6,4 +6,6 @@ brew "pinentry-mac"
 brew "gnupg"
 brew "ykman"
 brew "zsh"
+brew "vim"
+brew "screen"
 brew "rfidresearchgroup/proxmark3/proxmark3", args: ["with-generic"]
